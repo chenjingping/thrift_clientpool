@@ -37,7 +37,7 @@ type ThriftClientPool struct {
 }
 
 func NewThriftClientPool(name, address, port string, dialFn func(name, address, port string) (connection interface{}, err error), closeFn func(connection interface{}) (err error), keepAliveFn func(connection interface{}) (err error), poolSize, initialPoolSize int) (*ThriftClientPool, error) {
-
+	// add test comment
 	if dialFn == nil || closeFn == nil || keepAliveFn == nil {
 		return nil, errors.New("function not specified.")
 	}
